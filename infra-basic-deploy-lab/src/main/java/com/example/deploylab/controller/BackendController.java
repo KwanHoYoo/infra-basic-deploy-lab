@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class BackendController {
 
+	@GetMapping("/healthcheck")
+    public String healthcheck() {
+        return "healthcheck";
+    }
+	
     @GetMapping("/backend")
     public String backend() {
         return "backend";
@@ -21,4 +26,9 @@ public class BackendController {
     public String backend3() {
         return "backend3";
     }
+    @GetMapping("/backend4")
+    public String backend4() {
+        return "backend4";
+    }
+    
 } 
